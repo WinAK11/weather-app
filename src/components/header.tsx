@@ -1,6 +1,7 @@
 import { useTheme } from "@/context/theme-provider";
 import { Moon, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
+import CitySearch from "./city-search";
 
 export default function Header() {
     const { theme, setTheme } = useTheme();
@@ -13,8 +14,9 @@ export default function Header() {
                     <img src="/vite.svg" alt="app logo" className="h-12" />
                 </Link>
 
-                <div>
+                <div className="flex gap-4">
                     {/* search */}
+                    <CitySearch />
                     {/* theme toggle */}
                     <div
                         onClick={() => setTheme(isDark ? "light" : "dark")}

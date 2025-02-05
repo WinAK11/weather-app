@@ -5,6 +5,7 @@ import WeatherDashboard from "./pages/weather-dashboard";
 import CityPage from "./pages/city-page";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { Toaster } from "sonner";
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,7 @@ function App() {
             <ThemeProvider defaultTheme="dark">
                 <RouterProvider router={router} />
             </ThemeProvider>
+            <Toaster richColors />
             <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
     );
